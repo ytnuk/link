@@ -1,0 +1,36 @@
+form:
+	container:
+		group: Odkaz
+		property:
+			destination:
+				label: Cíl
+				placeholder: Vyplňte cíl
+			aliases:
+				group: Aliasy
+				action:
+					add: Přidat alias
+					delete: Odebrat alias
+			parameters:
+				group: Parametry
+				action:
+					add: Přidat parametr
+					delete: Odebrat parametr
+parameter:
+	form:
+		container:
+			group: Parametr
+			property:
+				key:
+					label: Klíč
+					placeholder: Vyplňte klíč
+				value:
+					label: Hodnota
+					placeholder: Vyplňte hodnotu
+alias:
+	form:
+		container:
+			group: Alias
+			property:
+				value:
+					label: Hodnota
+					placeholder: Vyplňte hodnotu

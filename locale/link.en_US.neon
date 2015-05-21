@@ -1,0 +1,36 @@
+form:
+	container:
+		group: Link
+		property:
+			destination:
+				label: Destination
+				placeholder: Fill destination
+			aliases:
+				group: Aliases
+				action:
+					add: Add alias
+					delete: Delete alias
+			parameters:
+				group: Parameters
+				action:
+					add: Add parameter
+					delete: Delete parameter
+parameter:
+	form:
+		container:
+			group: Parameter
+			property:
+				key:
+					label: Key
+					placeholder: Fill key
+				value:
+					label: Value
+					placeholder: Fill value
+alias:
+	form:
+		container:
+			group: Alias
+			property:
+				value:
+					label: Value
+					placeholder: Fill value

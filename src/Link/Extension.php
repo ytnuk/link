@@ -4,6 +4,7 @@ namespace Ytnuk\Link;
 
 use Nette;
 use Ytnuk;
+use Kdyby;
 
 /**
  * Class Extension
@@ -24,6 +25,11 @@ final class Extension extends Nette\DI\CompilerExtension implements Ytnuk\Config
 					$this->prefix('repository') => Repository::class,
 					$this->prefix('aliasRepository') => Alias\Repository::class,
 					$this->prefix('parameterRepository') => Parameter\Repository::class
+				]
+			],
+			Kdyby\Translation\DI\TranslationExtension::class => [
+				'dirs' => [
+					__DIR__ . '/../../locale'
 				]
 			],
 			'services' => [
