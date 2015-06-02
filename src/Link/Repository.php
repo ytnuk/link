@@ -43,6 +43,7 @@ final class Repository extends Ytnuk\Orm\Repository
 	 */
 	public function sortByParameters(Nextras\Orm\Mapper\Dbal\DbalCollection $collection, array $parameters)
 	{
+		$collection = $collection->findBy(['this->parameters->id!=' => NULL]);
 		$builder = $collection->getQueryBuilder();
 		foreach ($parameters as $key => $value) {
 			$arguments = [
