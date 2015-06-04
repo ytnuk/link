@@ -1,7 +1,5 @@
 presenter:
-	module: Odkaz
 	action:
-		add: Přidat odkaz
 		edit: Upravit odkaz
 form:
 	container:

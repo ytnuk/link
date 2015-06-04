@@ -1,7 +1,5 @@
 presenter:
-	module: Link
 	action:
-		add: Add link
 		edit: Edit link
 form:
 	container:
