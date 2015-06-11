@@ -10,7 +10,7 @@ use Ytnuk;
  *
  * @package Ytnuk\Link
  */
-final class Control extends Ytnuk\Application\Control
+final class Control extends Ytnuk\Orm\Control
 {
 
 	/**
@@ -47,6 +47,7 @@ final class Control extends Ytnuk\Application\Control
 	 */
 	public function __construct(Entity $link, Repository $repository, Control\Factory $control, Form\Control\Factory $formControl, Ytnuk\Orm\Grid\Control\Factory $gridControl)
 	{
+		parent::__construct($link);
 		$this->link = $link;
 		$this->repository = $repository;
 		$this->control = $control;
@@ -57,7 +58,7 @@ final class Control extends Ytnuk\Application\Control
 	/**
 	 * @return Form\Control
 	 */
-	protected function createComponentYtnukFormControl()
+	protected function createComponentYtnukOrmFormControl()
 	{
 		return $this->formControl->create($this->link ? : new Entity);
 	}

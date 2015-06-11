@@ -22,6 +22,10 @@ final class Container extends Ytnuk\Orm\Form\Container
 		switch ($property->name) {
 			case 'value':
 				$component->setOption('unique', TRUE);
+				break;
+			case 'primary':
+				$component->setOption('unique', 'link');
+				break;
 		}
 
 		return $component;
