@@ -5,9 +5,15 @@ form:
 	container:
 		group: Odkaz
 		property:
-			destination:
-				label: Cíl
-				placeholder: Vyplňte cíl
+			module:
+				label: Modul
+				placeholder: Vyplňte modul
+			presenter:
+				label: Presenter
+				placeholder: Vyplňte presenter
+			action:
+				label: Akce
+				placeholder: Vyplňte akci
 			aliases:
 				group: Aliasy
 				action:

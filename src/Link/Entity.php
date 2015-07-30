@@ -9,23 +9,28 @@ use Ytnuk;
  * @property string $module
  * @property string $presenter {default Presenter}
  * @property string $action {default view}
- * @property Nextras\Orm\Relationships\OneHasMany|Alias\Entity[] $aliases {1:m Alias\Repository $link}
- * @property Nextras\Orm\Relationships\OneHasMany|Parameter\Entity[] $parameters {1:m Parameter\Repository $link}
+ * @property Nextras\Orm\Relationships\OneHasMany|Alias\Entity[] $aliases {1:m Alias\Entity::$link}
+ * @property Nextras\Orm\Relationships\OneHasMany|Parameter\Entity[] $parameters {1:m Parameter\Entity::$link}
  */
-class Entity extends Ytnuk\Orm\Entity
+class Entity
+	extends Ytnuk\Orm\Entity
 {
 
+	const PROPERTY_NAME = 'module';
+
 	/**
-	 * @param bool $fullyQualified
-	 *
 	 * @return string
 	 */
-	public function getterDestination($fullyQualified = TRUE)
+	public function getterDestination()
 	{
-		return ($fullyQualified ? ':' : NULL) . implode(':', [
-			$this->module,
-			$this->presenter,
-			$this->action
-		]);
+		return implode(
+			':',
+			[
+				NULL,
+				$this->module,
+				$this->presenter,
+				$this->action,
+			]
+		);
 	}
 }

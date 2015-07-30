@@ -1,5 +1,4 @@
 <?php
-
 namespace Ytnuk\Link\Parameter\Form;
 
 use Nextras;
@@ -10,7 +9,8 @@ use Ytnuk;
  *
  * @package Ytnuk\Link
  */
-final class Container extends Ytnuk\Orm\Form\Container
+final class Container
+	extends Ytnuk\Orm\Form\Container
 {
 
 	/**
@@ -21,7 +21,10 @@ final class Container extends Ytnuk\Orm\Form\Container
 		$component = parent::addProperty($metadata);
 		switch ($metadata->name) {
 			case 'key':
-				$component->setOption('unique', TRUE);
+				$component->setOption(
+					'unique',
+					TRUE
+				);
 		}
 
 		return $component;

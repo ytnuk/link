@@ -1,5 +1,4 @@
 <?php
-
 namespace Ytnuk\Link\Alias;
 
 use Ytnuk;
@@ -9,7 +8,8 @@ use Ytnuk;
  *
  * @package Ytnuk\Link
  */
-final class Mapper extends Ytnuk\Orm\Mapper
+final class Mapper
+	extends Ytnuk\Orm\Mapper
 {
 
 }

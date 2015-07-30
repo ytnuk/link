@@ -1,5 +1,4 @@
 <?php
-
 namespace Ytnuk\Link\Form\Control;
 
 use Ytnuk;

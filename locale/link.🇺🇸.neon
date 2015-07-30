@@ -5,9 +5,15 @@ form:
 	container:
 		group: Link
 		property:
-			destination:
-				label: Destination
-				placeholder: Fill destination
+			module:
+				label: Module
+				placeholder: Fill module
+			presenter:
+				label: Presenter
+				placeholder: Fill presenter
+			action:
+				label: Action
+				placeholder: Fill action
 			aliases:
 				group: Aliases
 				action:
