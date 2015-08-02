@@ -48,8 +48,7 @@ final class Presenter
 	 */
 	public function actionEdit($id)
 	{
-		$this->link = $this->repository->getById($id);
-		if ( ! $this->link) {
+		if ( ! $this->link = $this->repository->getById($id)) {
 			$this->error();
 		}
 	}
