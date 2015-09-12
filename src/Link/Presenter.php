@@ -4,11 +4,6 @@ namespace Ytnuk\Link;
 use Nette;
 use Ytnuk;
 
-/**
- * Class Presenter
- *
- * @package Ytnuk\Link
- */
 final class Presenter
 	extends Ytnuk\Web\Presenter
 {
@@ -28,10 +23,6 @@ final class Presenter
 	 */
 	private $link;
 
-	/**
-	 * @param Repository $repository
-	 * @param Control\Factory $control
-	 */
 	public function __construct(
 		Repository $repository,
 		Control\Factory $control
@@ -41,12 +32,7 @@ final class Presenter
 		$this->control = $control;
 	}
 
-	/**
-	 * @param $id
-	 *
-	 * @throws Nette\Application\BadRequestException
-	 */
-	public function actionEdit($id)
+	public function actionEdit(int $id)
 	{
 		if ( ! $this->link = $this->repository->getById($id)) {
 			$this->error();
@@ -58,10 +44,7 @@ final class Presenter
 		$this[Ytnuk\Web\Control::class][Ytnuk\Menu\Control::class][] = 'link.presenter.action.edit';
 	}
 
-	/**
-	 * @return Control
-	 */
-	protected function createComponentYtnukLinkControl()
+	protected function createComponentYtnukLinkControl() : Control
 	{
 		return $this->control->create($this->link ? : new Entity);
 	}

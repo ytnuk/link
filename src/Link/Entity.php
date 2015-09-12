@@ -18,10 +18,7 @@ class Entity
 
 	const PROPERTY_NAME = 'module';
 
-	/**
-	 * @return string
-	 */
-	public function getterDestination()
+	public function getterDestination() : string
 	{
 		return implode(
 			':',
