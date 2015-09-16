@@ -16,7 +16,7 @@ class Entity
 	extends Ytnuk\Orm\Entity
 {
 
-	const PROPERTY_NAME = 'module';
+	const PROPERTY_NAME = 'destination';
 
 	public function getterDestination() : string
 	{
