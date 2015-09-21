@@ -50,7 +50,7 @@ final class Control
 
 	protected function createComponentYtnukOrmFormControl() : Form\Control
 	{
-		return $this->formControl->create($this->link ? : new Entity);
+		return $this->formControl->create($this->link);
 	}
 
 	protected function createComponentYtnukGridControl() : Ytnuk\Orm\Grid\Control
