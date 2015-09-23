@@ -41,10 +41,10 @@ final class Presenter
 
 	public function renderEdit()
 	{
-		$this[Ytnuk\Web\Control::class][Ytnuk\Menu\Control::class][] = 'link.presenter.action.edit';
+		$this[Ytnuk\Web\Control::NAME][Ytnuk\Menu\Control::NAME][] = 'link.presenter.action.edit';
 	}
 
-	protected function createComponentYtnukLinkControl() : Control
+	protected function createComponentLink() : Control
 	{
 		return $this->control->create($this->link ? : new Entity);
 	}
