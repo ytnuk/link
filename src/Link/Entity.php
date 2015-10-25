@@ -5,6 +5,7 @@ use Nextras;
 use Ytnuk;
 
 /**
+ * @property int $id {primary}
  * @property-read string $destination {virtual}
  * @property string $module
  * @property string $presenter {default Presenter}
