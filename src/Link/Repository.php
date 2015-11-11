@@ -3,9 +3,6 @@ namespace Ytnuk\Link;
 
 use Ytnuk;
 
-/**
- * @method sortByParameters
- */
 final class Repository
 	extends Ytnuk\Orm\Repository
 {
@@ -15,5 +12,17 @@ final class Repository
 		return [
 			Entity::class,
 		];
+	}
+
+	public function sortByParameters()
+	{
+		return call_user_func(
+			[
+				$this->getMapper(),
+				__FUNCTION__,
+			],
+			...
+			func_get_args()
+		);
 	}
 }
