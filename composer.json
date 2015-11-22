@@ -1,5 +1,10 @@
 {
 	"name": "ytnuk/link",
+	"extra": {
+		"extensions": {
+			"ytnuk/link": "Ytnuk\\Link\\Extension"
+		}
+	},
 	"require": {
 		"ytnuk/application": "dev-master",
 		"kdyby/translation": "dev-master",
