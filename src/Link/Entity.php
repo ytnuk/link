@@ -13,7 +13,7 @@ use Ytnuk;
  * @property Nextras\Orm\Relationships\OneHasMany|Alias\Entity[] $aliases {1:m Alias\Entity::$link}
  * @property Nextras\Orm\Relationships\OneHasMany|Parameter\Entity[] $parameters {1:m Parameter\Entity::$link}
  */
-class Entity
+final class Entity
 	extends Ytnuk\Orm\Entity
 {
 
