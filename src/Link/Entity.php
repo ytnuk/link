@@ -10,9 +10,7 @@ use Ytnuk;
  * @property string $module
  * @property string $presenter {default Presenter}
  * @property string $action {default view}
- * @property Nextras\Orm\Relationships\OneHasMany|Alias\Entity[] $aliases {1:m Alias\Entity::$link}
  * @property Nextras\Orm\Relationships\OneHasMany|Parameter\Entity[] $parameters {1:m Parameter\Entity::$link}
- * @property-read Alias\Entity|NULL $alias {virtual}
  */
 final class Entity
 	extends Ytnuk\Orm\Entity
@@ -31,15 +29,5 @@ final class Entity
 				$this->action,
 			]
 		);
-	}
-
-	public function getterAlias(string $locale)
-	{
-		return $this->aliases->get()->findBy(
-			[
-				'primary' => TRUE,
-				'locale' => $locale,
-			]
-		)->fetch();
 	}
 }

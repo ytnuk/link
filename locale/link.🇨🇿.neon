@@ -14,11 +14,6 @@ form:
 			action:
 				label: Akce
 				placeholder: Vyplňte akci
-			aliases:
-				group: Aliasy
-				action:
-					add: Přidat alias
-					delete: Odebrat alias
 			parameters:
 				group: Parametry
 				action:
@@ -32,14 +27,6 @@ parameter:
 				key:
 					label: Klíč
 					placeholder: Vyplňte klíč
-				value:
-					label: Hodnota
-					placeholder: Vyplňte hodnotu
-alias:
-	form:
-		container:
-			group: Alias
-			property:
 				value:
 					label: Hodnota
 					placeholder: Vyplňte hodnotu

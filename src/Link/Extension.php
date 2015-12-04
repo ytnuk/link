@@ -30,7 +30,6 @@ final class Extension
 		return [
 			'repositories' => [
 				$this->prefix('repository') => Repository::class,
-				$this->prefix('aliasRepository') => Alias\Repository::class,
 				$this->prefix('parameterRepository') => Parameter\Repository::class,
 			],
 		];

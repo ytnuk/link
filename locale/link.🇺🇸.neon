@@ -14,11 +14,6 @@ form:
 			action:
 				label: Action
 				placeholder: Fill action
-			aliases:
-				group: Aliases
-				action:
-					add: Add alias
-					delete: Delete alias
 			parameters:
 				group: Parameters
 				action:
@@ -32,14 +27,6 @@ parameter:
 				key:
 					label: Key
 					placeholder: Fill key
-				value:
-					label: Value
-					placeholder: Fill value
-alias:
-	form:
-		container:
-			group: Alias
-			property:
 				value:
 					label: Value
 					placeholder: Fill value
