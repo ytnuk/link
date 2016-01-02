@@ -23,14 +23,8 @@ final class Mapper
 				$order[] = 'parameters.key=\'' . $key . '\' AND parameters.value ' . ($value === NULL ? 'IS NULL' : '= \'' . (is_scalar($value) ? $value : serialize($value)) . '\' DESC');
 			}
 			//			dump($order);exit;
-			$from .= ' ORDER BY ' . implode(
-					', ',
-					$order
-				);
-			$builder->from(
-				'(' . $from . ')',
-				$builder->getFromAlias()
-			);
+			$from .= ' ORDER BY ' . implode(', ', $order);
+			$builder->from('(' . $from . ')', $builder->getFromAlias());
 		}
 
 		return $collection;

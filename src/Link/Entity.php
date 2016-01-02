@@ -20,14 +20,11 @@ final class Entity
 
 	public function getterDestination() : string
 	{
-		return implode(
-			':',
-			[
-				NULL,
-				$this->module,
-				$this->presenter,
-				$this->action,
-			]
-		);
+		return implode(':', [
+			NULL,
+			$this->module,
+			$this->presenter,
+			$this->action,
+		]);
 	}
 }

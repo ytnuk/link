@@ -16,13 +16,10 @@ final class Repository
 
 	public function sortByParameters()
 	{
-		return call_user_func(
-			[
-				$this->getMapper(),
-				__FUNCTION__,
-			],
-			...
-			func_get_args()
-		);
+		return call_user_func([
+			$this->getMapper(),
+			__FUNCTION__,
+		], ...
+			func_get_args());
 	}
 }

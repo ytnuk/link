@@ -13,10 +13,7 @@ final class Container
 		$component = parent::addProperty($metadata);
 		switch ($metadata->name) {
 			case 'key':
-				$component->setOption(
-					'unique',
-					TRUE
-				);
+				$component->setOption('unique', TRUE);
 		}
 
 		return $component;
