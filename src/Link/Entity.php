@@ -10,7 +10,7 @@ use Ytnuk;
  * @property string $module
  * @property string $presenter {default Presenter}
  * @property string $action {default view}
- * @property Nextras\Orm\Relationships\OneHasMany|Parameter\Entity[] $parameters {1:m Parameter\Entity::$link}
+ * @property Nextras\Orm\Relationships\OneHasMany|Parameter\Entity[] $parameters {1:m Parameter\Entity::$link, cascade=[persist, remove]}
  */
 final class Entity
 	extends Ytnuk\Orm\Entity
