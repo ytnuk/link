@@ -19,7 +19,6 @@ final class Repository
 		return call_user_func([
 			$this->getMapper(),
 			__FUNCTION__,
-		], ...
-			func_get_args());
+		], ...func_get_args());
 	}
 }
